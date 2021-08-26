@@ -1,0 +1,127 @@
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+  .small-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+  .social__media {
+    display: block;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (max-width: 992px) {
+  .work {
+    padding-top: 10rem;
+  }
+  .project {
+    .project__card {
+      grid-template-columns: 1fr;
+      border-bottom: 1px solid rgb(0, 0, 0);
+      padding-bottom: 2rem;
+      .card__right {
+        align-items: center;
+        margin-top: 1rem;
+        .card__description {
+          text-align: center;
+        }
+      }
+    }
+  }
+  .skill__card {
+    flex-direction: column;
+    padding: 1rem;
+    .sill__left {
+      margin-bottom: 1rem;
+    }
+  }
+}
+@media (max-width: 992px) {
+  .work {
+    .section__title {
+      color: #fff;
+    }
+  }
+  menu {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -100%;
+    padding: 4rem 0;
+    background: #242329;
+    transition: 0.3s;
+    width: 100%;
+    z-index: 99;
+    color: var(--white);
+    .menu__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      li + li {
+        margin-top: 2rem;
+      }
+    }
+  }
+  .active {
+    top: 6rem;
+  }
+}
+@media (min-width: 992px) {
+  menu {
+    color: var(--gray);
+    li + li {
+      margin-left: 1.5rem;
+    }
+  }
+  .container {
+    max-width: 960px;
+  }
+  // menu,
+  .resume {
+    display: block;
+  }
+  .hamburgerIcon,
+  .resume-mobile {
+    display: none;
+  }
+  .work {
+    padding-top: 15rem;
+  }
+  .about {
+    .about__wrapper {
+      flex-direction: row;
+      .about__left {
+        text-align: left;
+        align-items: flex-start;
+        margin-bottom: 0;
+      }
+    }
+    .scrollDown {
+      justify-content: flex-start;
+    }
+  }
+  .project {
+    .project__card {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  .skill__card {
+    flex-direction: row;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1000px;
+  }
+}

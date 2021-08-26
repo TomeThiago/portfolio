@@ -1,0 +1,21 @@
+header {
+  padding: 2rem 0;
+  .wrapper {
+    justify-content: space-between;
+    align-items: center;
+    .header__logo {
+      height: 50px;
+      width: 50px;
+    }
+    menu {
+      a {
+        font-size: 1.2rem;
+      }
+      li {
+        &:hover {
+          color: var(--white);
+        }
+      }
+    }
+  }
+}
