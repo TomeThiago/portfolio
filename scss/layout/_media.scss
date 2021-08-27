@@ -3,6 +3,12 @@
   .container {
     max-width: 540px;
   }
+  .skill {
+    padding: 2rem 0;
+    .skill__card {
+      padding: 3rem;
+    }
+  }
 }
 
 // Medium devices (tablets, 768px and up)
@@ -15,6 +21,14 @@
   }
   .social__media {
     display: block;
+  }
+  .contact {
+    .email {
+      flex-direction: row;
+      span {
+        margin-bottom: 0;
+      }
+    }
   }
 }
 
@@ -116,6 +130,13 @@
   }
   .skill__card {
     flex-direction: row;
+  }
+  .contact {
+    .email {
+      span {
+        font-size: 3rem;
+      }
+    }
   }
 }
 
