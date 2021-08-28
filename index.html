@@ -16,20 +16,21 @@
           <img class="header__logo" src="./assets/logo.png" alt="" srcset="" />
           <menu id="colaps__menu">
             <ul class="menu__item">
-              <li class="menu-list-item" onclick="closeFunction()">
+              <li class="menu-list-item">
                 <a href="/">About</a>
               </li>
-              <li class="menu-list-item" onclick="closeFunction()">
+              <li class="menu-list-item">
                 <a href="#work">Projects</a>
               </li>
-              <li class="menu-list-item" onclick="closeFunction()">
+              <li class="menu-list-item">
                 <a href="#skill">About</a>
               </li>
-              <li
-                class="btn btn-primary resume-mobile menu-list-item"
-                onclick="closeFunction()"
-              >
-                <a href="">Resume</a>
+              <li>
+                <a
+                  class="btn btn-primary resume-mobile menu-list-item"
+                  href="https://github.com/gurupawar/"
+                  >Resume</a
+                >
               </li>
             </ul>
           </menu>
@@ -44,9 +45,9 @@
       </header>
 
       <!-- --------------------------------- Hero Section ------------ -->
-      <div class="about container">
-        <div class="about__wrapper">
-          <div class="about__left">
+      <div class="hero container">
+        <div class="hero__wrapper">
+          <div class="hero__left">
             <h1>Hi, I'm Gurushesh</h1>
             <h5>Frontend Developer</h5>
             <p>
@@ -54,8 +55,8 @@
               and I love what I do.
             </p>
           </div>
-          <div class="about__right">
-            <img src="./assets/man-svgrepo-com.svg" alt="" srcset="" />
+          <div class="hero__right">
+            <img src="./assets/man-svgrepo-com.svg" alt="man-svg" />
           </div>
         </div>
         <div class="scrollDown">
@@ -64,8 +65,7 @@
             <img
               class="scroll-down"
               src="./assets/scroll-down.svg"
-              alt=""
-              srcset=""
+              alt="scroll-down"
           /></a>
         </div>
       </div>
@@ -73,12 +73,30 @@
 
     <!-- --------------------------------- Projects ------------ -->
     <section class="work" id="work">
+      <svg
+        height="100%"
+        width="100%"
+        id="svg"
+        viewBox="0 0 1440 400"
+        xmlns="http://www.w3.org/2000/svg"
+        class="transition duration-300 ease-in-out delay-150"
+      >
+        <path
+          d="M 0,400 C 0,400 0,200 0,200 C 109.28571428571428,173 218.57142857142856,146 327,141 C 435.42857142857144,136 542.9999999999999,153 686,185 C 829.0000000000001,217 1007.4285714285713,264 1139,269 C 1270.5714285714287,274 1355.2857142857142,237 1440,200 C 1440,200 1440,400 1440,400 Z"
+          stroke="none"
+          stroke-width="0"
+          fill="#151418ff"
+          class="transition-all duration-300 ease-in-out delay-150"
+          transform="rotate(-180 720 200)"
+        ></path>
+      </svg>
+
       <div class="work__wrapper container">
-        <div class="section__title">Projects</div>
+        <h3 class="section__title">Projects</h3>
         <div class="project">
           <div class="project__card">
             <div class="card__left">
-              <img src="./assets/project_1.png" alt="" />
+              <img src="./assets/project_1.png" alt="Spense html css" />
             </div>
             <div class="card__right">
               <h4 class="card__heading">Spense</h4>
@@ -92,7 +110,7 @@
               </div>
               <div class="btn-group">
                 <a
-                  href="https://gurupawar.github.io/spense/"
+                  href="https://github.com/gurupawar/spense"
                   target="_blank"
                   class="btn btn-secondary"
                   >Github</a
@@ -108,7 +126,7 @@
           </div>
           <div class="project__card">
             <div class="card__left">
-              <img src="./assets/project_2.png" alt="" />
+              <img src="./assets/project_2.png" alt=" Fiber landing page" />
             </div>
             <div class="card__right">
               <h4 class="card__heading">Fiber</h4>
@@ -122,13 +140,42 @@
               </div>
               <div class="btn-group">
                 <a
-                  href="https://gurupawar.github.io/spense/"
+                  href="https://github.com/gurupawar/fiber"
                   target="_blank"
                   class="btn btn-secondary"
                   >Github</a
                 >
                 <a
-                  href="https://gurupawar.github.io/fiber/"
+                  href="https://gurupawar.github.io/fiber"
+                  target="_blank"
+                  class="btn btn-primary"
+                  >Demo ➜</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="project__card">
+            <div class="card__left">
+              <img src="./assets/portfolio.png" alt="gurupawar" />
+            </div>
+            <div class="card__right">
+              <h4 class="card__heading">Portfolio</h4>
+              <p class="card__description">
+                Ofcourse i made my own personal portfolio website.
+              </p>
+              <div class="stack">
+                <span class="stack__title">Tech Stack -</span>
+                <span class="tags">Html, Css, Javascript</span>
+              </div>
+              <div class="btn-group">
+                <a
+                  href="https://github.com/gurupawar/portfolio"
+                  target="_blank"
+                  class="btn btn-secondary"
+                  >Github</a
+                >
+                <a
+                  href="https://gurupawar.github.io/portfolio"
                   target="_blank"
                   class="btn btn-primary"
                   >Demo ➜</a
@@ -139,34 +186,37 @@
         </div>
       </div>
     </section>
-
     <!-- --------------------------------- Skill and AboutMe Section ------------ -->
     <section class="skill" id="skill">
       <div class="skill_wrapper container">
-        <div class="section__title">About Me</div>
+        <h3 class="section__title">About Me</h3>
         <div class="skill__card">
-          <img src="./assets/man-svgrepo-com.svg" alt="" class="avatar" />
+          <img
+            src="./assets/man-svgrepo-com.svg"
+            alt="man-svgrepo"
+            class="avatar"
+          />
           <span class="about-bio">
-            Hello! My name is Gurushesh Pawar and I enjoy creating things that
-            live on the internet. My interest in web development started back in
-            2014 when I decided to try editing custom Blogger themes — turns out
-            hacking together a custom reblog button taught me a lot about HTML &
-            CSS!
+            Hello! My name is <strong>Gurushesh Pawar</strong> and I enjoy
+            creating things that live on the internet. My interest in web
+            development started back in 2014 when I decided to try editing
+            custom Blogger themes — turns out hacking together a custom reblog
+            button taught me a lot about HTML & CSS!
           </span>
           <span class="tagline"
             >I have become confident using the following technologies.</span
           >
           <div class="technologies">
             <div class="tech">
-              <img src="./assets/skill/html5.svg" alt="" srcset="" />
+              <img src="./assets/skill/html5.svg" alt="html-icon" />
               <span>HTML</span>
             </div>
             <div class="tech">
-              <img src="./assets/skill/css3.svg" alt="" srcset="" />
+              <img src="./assets/skill/css3.svg" alt="css3-icon" srcset />
               <span>CSS3</span>
             </div>
             <div class="tech">
-              <img src="./assets/skill/javascript.svg" alt="" srcset="" />
+              <img src="./assets/skill/javascript.svg" alt="javascript-icon" />
               <span>JavaScript</span>
             </div>
             <!-- <div class="tech">
@@ -174,19 +224,22 @@
               <span>Reactjs</span>
             </div> -->
             <div class="tech">
-              <img src="./assets/skill/bootstrap.svg" alt="" srcset="" />
+              <img src="./assets/skill/bootstrap.svg" alt="bootstrap-icon" />
               <span>Bootstrap</span>
             </div>
             <div class="tech">
-              <img src="./assets/skill/sass.svg" alt="" srcset="" />
+              <img src="./assets/skill/sass.svg" alt="scss-icon" />
               <span>Scss</span>
             </div>
             <div class="tech">
-              <img src="./assets/skill/git.svg" alt="" srcset="" />
+              <img src="./assets/skill/git.svg" alt="git-icon" />
               <span>Git</span>
             </div>
             <div class="tech">
-              <img src="./assets/skill/responsive.svg" alt="" srcset="" />
+              <img
+                src="./assets/skill/responsive.svg"
+                alt="responsive-website"
+              />
               <span>Responsive</span>
             </div>
           </div>
@@ -196,12 +249,29 @@
 
     <!-- --------------------------------- Contact Section ------------ -->
     <section class="contact container">
-      <div class="section__title">Get In Touch</div>
+      <h3 class="section__title">Get In Touch</h3>
       <div class="email">
-        <span>vickypawar@gmail.com</span>
-        <a href="mailto:vickypawar@gmail.com" class="btn btn-primary"
+        <span>vickypawar185@gmail.com</span>
+        <a href="mailto:vickypawar185@gmail.com" class="btn btn-primary"
           >Send Mail</a
         >
+      </div>
+      <div class="socialMedia">
+        <ul>
+          <li>
+            <a href="https://www.linkedin.com/in/gurusheshp/"
+              ><i class="ph-linkedin-logo"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://github.com/gurupawar/"
+              ><i class="ph-github-logo"></i
+            ></a>
+          </li>
+          <li class="dot">
+            <a href=""><i class="ph-instagram-logo"></i></a>
+          </li>
+        </ul>
       </div>
     </section>
 
@@ -209,7 +279,10 @@
     <footer>
       <div class="footer__wrapper container">
         <span>
-          Coded with 💙 by <a href="#" target="_blank">@gurupawar</a></span
+          Coded with 💙 by
+          <a href="https://github.com/gurupawar/" target="_blank"
+            >@gurupawar</a
+          ></span
         >
       </div>
     </footer>
@@ -218,13 +291,19 @@
     <div class="social__media">
       <ul>
         <li>
-          <a href=""><i class="ph-linkedin-logo"></i></a>
+          <a href="https://www.linkedin.com/in/gurusheshp/"
+            ><i class="ph-linkedin-logo"></i
+          ></a>
         </li>
         <li>
-          <a href=""><i class="ph-github-logo"></i></a>
+          <a href="https://github.com/gurupawar/"
+            ><i class="ph-github-logo"></i
+          ></a>
         </li>
         <li class="dot">
-          <a href=""><i class="ph-instagram-logo"></i></a>
+          <a href="https://github.com/gurupawar/"
+            ><i class="ph-instagram-logo"></i
+          ></a>
         </li>
       </ul>
     </div>
