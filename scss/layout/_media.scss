@@ -22,6 +22,9 @@
   .social__media {
     display: block;
   }
+  .socialMedia {
+    display: none;
+  }
   .contact {
     .email {
       flex-direction: row;
@@ -34,9 +37,9 @@
 
 // Large devices (desktops, 992px and up)
 @media (max-width: 992px) {
-  .work {
-    padding-top: 10rem;
-  }
+  // .work {
+  //   padding-top: 10rem;
+  // }
   .project {
     .project__card {
       grid-template-columns: 1fr;
@@ -60,11 +63,11 @@
   }
 }
 @media (max-width: 992px) {
-  .work {
-    .section__title {
-      color: #fff;
-    }
-  }
+  // .work {
+  // .section__title {
+  //   color: #fff;
+  // }
+  // }
   menu {
     position: fixed;
     left: 50%;
@@ -75,7 +78,7 @@
     transition: 0.3s;
     width: 100%;
     z-index: 99;
-    color: var(--white);
+    color: var(--gray);
     .menu__item {
       display: flex;
       flex-direction: column;
@@ -89,6 +92,7 @@
     top: 6rem;
   }
 }
+
 @media (min-width: 992px) {
   menu {
     color: var(--gray);
@@ -99,7 +103,6 @@
   .container {
     max-width: 960px;
   }
-  // menu,
   .resume {
     display: block;
   }
@@ -107,13 +110,13 @@
   .resume-mobile {
     display: none;
   }
-  .work {
-    padding-top: 15rem;
-  }
-  .about {
-    .about__wrapper {
+  // .work {
+  //   padding-top: 15rem;
+  // }
+  .hero {
+    .hero__wrapper {
       flex-direction: row;
-      .about__left {
+      .hero__left {
         text-align: left;
         align-items: flex-start;
         margin-bottom: 0;

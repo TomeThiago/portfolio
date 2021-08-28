@@ -91,14 +91,16 @@ th:not([align]) {
 
 .wrapper,
 .menu__item,
-.about,
-.about__wrapper,
-.about__left,
-.about__right,
+.hero,
+.hero__wrapper,
+.hero__left,
+.hero__right,
 .scrollDown,
 .card__left,
 .card__right,
-.stack {
+.stack,
+.contact,
+.email {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -116,12 +118,24 @@ th:not([align]) {
 .btn {
   padding: 10px 1rem;
   border-radius: 5px;
+  -webkit-transition: 0.25s ease-in;
+  transition: 0.25s ease-in;
+}
+
+.btn:hover {
+  background: var(--theme);
+  color: var(--white);
 }
 
 .btn-primary {
   background: var(--theme);
   border: 2px solid var(--theme);
   color: var(--white);
+}
+
+.btn-primary:hover {
+  background: var(--pure-white);
+  color: #000;
 }
 
 .btn-secondary {
@@ -185,6 +199,14 @@ th:not([align]) {
   margin-left: auto;
 }
 
+.active {
+  left: 50%;
+}
+
+.resume {
+  display: none;
+}
+
 main {
   background: var(--backgroud);
   background-image: url(https://raw.githubusercontent.com/gurupawar/portfolio/main/assets/blob-haikei.svg);
@@ -192,29 +214,23 @@ main {
   background-size: cover;
 }
 
-.about {
+.hero {
   padding-top: 4rem;
   padding-bottom: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
 }
 
-.about .about__wrapper {
+.hero .hero__wrapper {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
 }
 
-.about .about__wrapper .about__left {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.hero .hero__wrapper .hero__left {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -232,25 +248,25 @@ main {
   margin-bottom: 2rem;
 }
 
-.about .about__wrapper .about__left h1 {
+.hero .hero__wrapper .hero__left h1 {
   font-size: 2.8rem;
   color: var(--white);
   opacity: 0.98;
 }
 
-.about .about__wrapper .about__left h5 {
+.hero .hero__wrapper .hero__left h5 {
   font-size: 1.6rem;
   color: var(--gray);
   margin-bottom: 1rem;
 }
 
-.about .about__wrapper .about__left p {
+.hero .hero__wrapper .hero__left p {
   font-size: 17px;
   color: var(--white);
   opacity: 0.85;
 }
 
-.about .about__wrapper .about__right {
+.hero .hero__wrapper .hero__right {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -259,12 +275,12 @@ main {
           justify-content: center;
 }
 
-.about .about__wrapper .about__right img {
+.hero .hero__wrapper .hero__right img {
   height: 300px;
   width: auto;
 }
 
-.about .scrollDown {
+.hero .scrollDown {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -273,7 +289,7 @@ main {
           animation: bounce 2s linear 0s infinite;
 }
 
-.about .scrollDown a {
+.hero .scrollDown a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -284,18 +300,10 @@ main {
   color: var(--white);
 }
 
-.about .scrollDown a img {
+.hero .scrollDown a img {
   height: 35px;
   width: 35px;
   margin-left: 6px;
-}
-
-.active {
-  left: 50%;
-}
-
-.resume {
-  display: none;
 }
 
 @-webkit-keyframes bounce {
@@ -338,20 +346,16 @@ main {
 
 .work {
   width: 100%;
-  background-image: url(https://raw.githubusercontent.com/gurupawar/portfolio/main/assets/wave_wave.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
-.work .project .project__card {
+.work .work__wrapper .project .project__card {
   display: -ms-grid;
   display: grid;
-  min-height: 220px;
   grid-gap: 2rem;
   margin-bottom: 4rem;
 }
 
-.work .project .project__card .card__left {
+.work .work__wrapper .project .project__card .card__left {
   background: var(--backgroud);
   border-radius: 5px;
   padding: 5px;
@@ -359,12 +363,12 @@ main {
       justify-self: center;
 }
 
-.work .project .project__card .card__left img {
+.work .work__wrapper .project .project__card .card__left img {
   border-radius: 3px;
   height: auto;
 }
 
-.work .project .project__card .card__right {
+.work .work__wrapper .project .project__card .card__right {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -374,35 +378,35 @@ main {
           justify-content: center;
 }
 
-.work .project .project__card .card__right .card__heading {
+.work .work__wrapper .project .project__card .card__right .card__heading {
   font-size: 1.5rem;
 }
 
-.work .project .project__card .card__right .card__description {
+.work .work__wrapper .project .project__card .card__right .card__description {
   max-width: 400px;
   margin-top: 10px;
   margin-bottom: 1rem;
   color: var(--dark-text);
 }
 
-.work .project .project__card .card__right .stack {
+.work .work__wrapper .project .project__card .card__right .stack {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 5px;
 }
 
-.work .project .project__card .card__right .stack .stack__title {
+.work .work__wrapper .project .project__card .card__right .stack .stack__title {
   font-weight: 500;
   margin-right: 10px;
   font-size: 17px;
 }
 
-.work .project .project__card .card__right .stack .tags {
+.work .work__wrapper .project .project__card .card__right .stack .tags {
   font-size: 15px;
 }
 
-.work .project .project__card .card__right .btn-group {
+.work .work__wrapper .project .project__card .card__right .btn-group {
   height: 70px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -429,7 +433,7 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: #fff;
+  background: var(--pure-white);
   -webkit-box-shadow: rgba(0, 0, 0, 0.05) 0px 5px 10px;
           box-shadow: rgba(0, 0, 0, 0.05) 0px 5px 10px;
 }
@@ -492,12 +496,13 @@ main {
 .contact {
   margin-top: 3rem;
   margin-bottom: 3rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .contact .email {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -507,7 +512,7 @@ main {
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  background: #fff;
+  background: var(--pure-white);
   padding: 2rem;
   border-radius: 1rem;
   -webkit-box-shadow: rgba(0, 0, 0, 0.05) 0px 5px 10px;
@@ -518,6 +523,34 @@ main {
   font-size: 1.5rem;
   font-weight: 500;
   margin-bottom: 1rem;
+}
+
+.contact .socialMedia {
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 2rem;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.contact .socialMedia ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contact .socialMedia ul i {
+  font-size: 2.5rem;
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+}
+
+.contact .socialMedia ul i:hover {
+  color: var(--theme);
+}
+
+.contact .socialMedia ul li + li {
+  margin-left: 2rem;
 }
 
 footer {
@@ -588,6 +621,9 @@ header .wrapper menu li:hover {
   .social__media {
     display: block;
   }
+  .socialMedia {
+    display: none;
+  }
   .contact .email {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -600,9 +636,6 @@ header .wrapper menu li:hover {
 }
 
 @media (max-width: 992px) {
-  .work {
-    padding-top: 10rem;
-  }
   .project .project__card {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
@@ -631,9 +664,6 @@ header .wrapper menu li:hover {
 }
 
 @media (max-width: 992px) {
-  .work .section__title {
-    color: #fff;
-  }
   menu {
     position: fixed;
     left: 50%;
@@ -646,7 +676,7 @@ header .wrapper menu li:hover {
     transition: 0.3s;
     width: 100%;
     z-index: 99;
-    color: var(--white);
+    color: var(--gray);
   }
   menu .menu__item {
     display: -webkit-box;
@@ -685,23 +715,20 @@ header .wrapper menu li:hover {
   .resume-mobile {
     display: none;
   }
-  .work {
-    padding-top: 15rem;
-  }
-  .about .about__wrapper {
+  .hero .hero__wrapper {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  .about .about__wrapper .about__left {
+  .hero .hero__wrapper .hero__left {
     text-align: left;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
     margin-bottom: 0;
   }
-  .about .scrollDown {
+  .hero .scrollDown {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;

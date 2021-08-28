@@ -1,24 +1,32 @@
+// ------------------------------------------- Layout Styling
 .container {
   padding-right: 1rem;
   padding-left: 1rem;
   margin-right: auto;
   margin-left: auto;
 }
+.active {
+  left: 50%;
+}
+.resume {
+  display: none;
+}
+
 main {
   background: var(--backgroud);
   background-image: url(https://raw.githubusercontent.com/gurupawar/portfolio/main/assets/blob-haikei.svg);
   background-repeat: no-repeat;
   background-size: cover;
 }
-.about {
+
+// ------------------------------------------- Hero
+.hero {
   padding-top: 4rem;
   padding-bottom: 2rem;
-  display: flex;
   flex-direction: column;
-  .about__wrapper {
+  .hero__wrapper {
     flex-direction: column;
-    .about__left {
-      display: flex;
+    .hero__left {
       flex-direction: column;
       justify-content: center;
       align-items: center;
@@ -41,7 +49,7 @@ main {
         opacity: 0.85;
       }
     }
-    .about__right {
+    .hero__right {
       flex: 1;
       justify-content: center;
       img {
@@ -50,9 +58,9 @@ main {
       }
     }
   }
+  // ------------------- Scroll Down Btn
   .scrollDown {
     justify-content: center;
-
     margin-top: 4rem;
     animation: bounce 2s linear 0s infinite;
     a {
@@ -68,13 +76,8 @@ main {
     }
   }
 }
-.active {
-  left: 50%;
-}
-// menu,
-.resume {
-  display: none;
-}
+
+// ------------------- Scroll Down Btn Animation
 @keyframes bounce {
   0%,
   20%,
@@ -90,61 +93,65 @@ main {
     transform: translateY(-10px);
   }
 }
+
+// ------------------------------------------- Projects
 .work {
   width: 100%;
-  background-image: url(https://raw.githubusercontent.com/gurupawar/portfolio/main/assets/wave_wave.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  .project {
-    .project__card {
-      display: grid;
-      min-height: 220px;
-      grid-gap: 2rem;
-      margin-bottom: 4rem;
-      .card__left {
-        background: var(--backgroud);
-        border-radius: 5px;
-        padding: 5px;
-        justify-self: center;
-        img {
-          border-radius: 3px;
-          height: auto;
-        }
-      }
-      .card__right {
-        flex-direction: column;
-        justify-content: center;
-        .card__heading {
-          font-size: 1.5rem;
-        }
-        .card__description {
-          max-width: 400px;
-          margin-top: 10px;
-          margin-bottom: 1rem;
-          color: var(--dark-text);
-        }
-        .stack {
-          align-items: center;
-          margin-bottom: 5px;
-          .stack__title {
-            font-weight: 500;
-            margin-right: 10px;
-            font-size: 17px;
-          }
-          .tags {
-            font-size: 15px;
+  // background-image: url(https://raw.githubusercontent.com/gurupawar/portfolio/main/assets/wave_wave.svg);
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  .work__wrapper {
+    .project {
+      .project__card {
+        display: grid;
+        grid-gap: 2rem;
+        margin-bottom: 4rem;
+        .card__left {
+          background: var(--backgroud);
+          border-radius: 5px;
+          padding: 5px;
+          justify-self: center;
+          img {
+            border-radius: 3px;
+            height: auto;
           }
         }
-        .btn-group {
-          height: 70px;
-          display: flex;
-          align-items: center;
+        .card__right {
+          flex-direction: column;
+          justify-content: center;
+          .card__heading {
+            font-size: 1.5rem;
+          }
+          .card__description {
+            max-width: 400px;
+            margin-top: 10px;
+            margin-bottom: 1rem;
+            color: var(--dark-text);
+          }
+          .stack {
+            align-items: center;
+            margin-bottom: 5px;
+            .stack__title {
+              font-weight: 500;
+              margin-right: 10px;
+              font-size: 17px;
+            }
+            .tags {
+              font-size: 15px;
+            }
+          }
+          .btn-group {
+            height: 70px;
+            display: flex;
+            align-items: center;
+          }
         }
       }
     }
   }
 }
 
+// ------------------------------------------- About and Skill
 .skill {
   padding: 2rem 0;
   .skill__card {
@@ -156,8 +163,7 @@ main {
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
-    background: #fff;
-    // box-shadow: rgba(85, 32, 163, 0.06) 0px 27px 72px;
+    background: var(--pure-white);
     box-shadow: rgba(0, 0, 0, 0.05) 0px 5px 10px;
     .avatar {
       max-width: 120px;
@@ -198,15 +204,16 @@ main {
   }
 }
 
+// ------------------------------------------- ContactMe
 .contact {
   margin-top: 3rem;
   margin-bottom: 3rem;
+  flex-direction: column;
   .email {
-    display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: space-around;
-    background: #fff;
+    background: var(--pure-white);
     padding: 2rem;
     border-radius: 1rem;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 5px 10px;
@@ -216,7 +223,29 @@ main {
       margin-bottom: 1rem;
     }
   }
+  // ------------------------------------------- Mobile Social Media Icons
+  .socialMedia {
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 2rem;
+    justify-self: center;
+    ul {
+      display: flex;
+      i {
+        font-size: 2.5rem;
+        transition: 0.2s ease-in;
+        &:hover {
+          color: var(--theme);
+        }
+      }
+      li + li {
+        margin-left: 2rem;
+      }
+    }
+  }
 }
+
+// ------------------------------------------- Footer
 footer {
   background-image: url(https://raw.githubusercontent.com/gurupawar/portfolio/main/assets/footer_wave.svg);
   background-repeat: no-repeat;

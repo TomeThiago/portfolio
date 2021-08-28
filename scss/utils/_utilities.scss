@@ -1,13 +1,14 @@
 .wrapper,
 .menu__item,
-.about,
-.about__wrapper,
-.about__left,
-.about__right,
+.hero,
+.hero__wrapper,
+.hero__left,
+.hero__right,
 .scrollDown,
-// .project__card,
 .card__left,
 .card__right,
- .stack {
+.stack,
+.contact,
+.email {
   display: flex;
 }
